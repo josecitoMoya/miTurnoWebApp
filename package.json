@@ -4,7 +4,8 @@
   "description": "A simple web application for managing appointments and schedules.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "keywords": [
     "appointments",
@@ -18,6 +19,13 @@
   "author": "Gonzalo Lenardon, Ben Snaider, Sebastian Heinken & Jose Moya",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "axios": "^1.6.2",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "sequelize": "^6.35.1"
   }
 }
