@@ -2,11 +2,15 @@ const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
+dotenv.config();
+
+//db
+
+const database = require("./config/mongoDB");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 const routes = require("./routes/index");
-dotenv.config();
 
 //Middlewares
 // app.use(
@@ -27,6 +31,7 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
+database();
 app.listen(port, () => {
   console.log(`Servidor de back corriendo en puerto ${port}`);
 });
