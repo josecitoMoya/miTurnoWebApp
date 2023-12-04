@@ -1,11 +1,12 @@
 const express = require("express");
-const user = require("./clients.routes");
+const clients = require("./clients.routes");
 const enterprise = require("./enterpise.routes");
 const admin = require("./admin.routes");
 
 const router = express();
 
-router.use("/user", user);
+// router.use("/", (req, res) => res.send("estas en el enrutador"));
+router.use("/clients", clients);
 router.use("/enterprises", enterprise);
 router.use("/admin", admin);
 

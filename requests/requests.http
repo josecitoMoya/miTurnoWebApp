@@ -1,0 +1,48 @@
+###
+# Deberia dar la bienvenida a la app
+POST http://localhost:3001/ HTTP/1.1
+Content-Type: application/json
+
+{}
+
+###
+# Deberia avisar que estas en crear cliente
+POST http://localhost:3001/api/clients/signup HTTP/1.1
+Content-Type: application/json
+
+{
+"name": "Cosme",
+"lastName": "Fulanito",
+"dni": 12345678,
+"mail": "j@m.com",
+"password": "test"
+}
+
+###
+#Deberia traer todos los clientes
+calhost:3001/api/clients/getClients HTTP/1.1
+
+
+###
+#deberia traer un cliente
+GET http://localhost:3001/api/clients/getOneClient/656c79d15b47b4b38ae7e85d HTTP/1.1
+
+###
+#Deberia editar un cliente
+PUT  http://localhost:3001/api/clients/editClient/656c79d15b47b4b38ae7e85d HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Jose",
+  "lastName": "Moya"
+}
+
+###
+#Deberia eliminar un cliente
+PUT  http://localhost:3001/api/clients/editClient/656c79d15b47b4b38ae7e85d HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Jose",
+  "lastName": "Moya"
+}
